@@ -3,6 +3,7 @@ import "./App.css";
 
 import axois from "axios";
 import { saveAs } from "file-saver";
+import axios from 'axios';
 
 class App extends React.Component {
   state = {
@@ -14,7 +15,10 @@ class App extends React.Component {
 
   handleChange = ({target: { value, name }}) => this.setState({[name]: value});
 
-  createAndDownloadPdf =
+  createAndDownloadPdf = () => {
+    axios.post('/create-pdf', this.state)
+
+  }
    
   
  
