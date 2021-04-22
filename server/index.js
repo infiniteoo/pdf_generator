@@ -22,7 +22,7 @@ app.post('/create-pdf', (req,res) => {
         }
         return Promise.resolve();
 
-        
+
     });
 
 
@@ -31,7 +31,9 @@ app.post('/create-pdf', (req,res) => {
 
 // GET ROUTE - SEND THE GENERATED PDF TO THE CLIENT
 
-
+app.get('/fetch-pdf', (req, res) => {
+    res.sendFile(`${__dirname}/result.pdf`)
+})
 
 
 
