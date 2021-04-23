@@ -8,13 +8,10 @@ import { saveAs } from "file-saver";
 import {
   Typography,
   AppBar,
-  
   TextField,
-  
   CssBaseline,
   Grid,
   Toolbar,
- 
   Button,
 } from "@material-ui/core";
 
@@ -48,17 +45,48 @@ class App extends React.Component {
           <Typography variant="h6">PDF Generator w/ React</Typography>
         </AppBar>
         <div className="App">
-          
-        <form /* className={classes.root} */ noValidate autoComplete="off">
-         
-          <TextField name="name" label="Name" variant="outlined" onChange={this.handleChange}/>
-          <TextField name="receiptId" label="Receipt ID" variant="outlined" onChange={this.handleChange}/>
-          <TextField name="price1" label="Price 1" variant="outlined" onChange={this.handleChange}/>
-          <TextField name="price2" label="Price 2" variant="outlined" onChange={this.handleChange}/>
-          <Button onClick={this.createAndDownloadPdf}>Download PDF </Button>
-        </form>
+          <form /* className={classes.root} */ noValidate autoComplete="off">
+            <Grid container spacing={1} justify="center">
+              <Grid item md={12}>
+                <TextField
+                  name="name"
+                  label="Name"
+                  variant="outlined"
+                  onChange={this.handleChange}
+                />
+              </Grid>
+              <Grid item md={12}>
+                <TextField
+                  name="receiptId"
+                  label="Receipt ID"
+                  variant="outlined"
+                  onChange={this.handleChange}
+                />
+              </Grid>
+              <Grid item md={12}>
+                <TextField
+                  name="price1"
+                  label="Price 1"
+                  variant="outlined"
+                  onChange={this.handleChange}
+                />
+              </Grid>
+              <Grid item md={12}>
+                <TextField
+                  name="price2"
+                  label="Price 2"
+                  variant="outlined"
+                  onChange={this.handleChange}
+                />
+              </Grid>
+              <Grid item md={12}>
+                <Button onClick={this.createAndDownloadPdf}>
+                  Download PDF{" "}
+                </Button>
+              </Grid>
+            </Grid>
+          </form>
 
-        
           {/* <input
             type="text"
             placeholder="Name"
@@ -83,7 +111,6 @@ class App extends React.Component {
             name="price2"
             onChange={this.handleChange}
           /> */}
-          
         </div>
       </>
     );
