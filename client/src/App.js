@@ -8,15 +8,13 @@ import { saveAs } from "file-saver";
 import {
   Typography,
   AppBar,
-  Card,
+  
   TextField,
-  CardActions,
-  CardContent,
-  CardMedia,
+  
   CssBaseline,
   Grid,
   Toolbar,
-  Container,
+ 
   Button,
 } from "@material-ui/core";
 
@@ -50,16 +48,15 @@ class App extends React.Component {
           <Typography variant="h6">PDF Generator w/ React</Typography>
         </AppBar>
         <div className="App">
-        <Container maxWidth="sm">
+          
         <form /* className={classes.root} */ noValidate autoComplete="off">
          
           <TextField name="name" label="Name" variant="outlined" onChange={this.handleChange}/>
           <TextField name="receiptId" label="Receipt ID" variant="outlined" onChange={this.handleChange}/>
           <TextField name="price1" label="Price 1" variant="outlined" onChange={this.handleChange}/>
-          <TextField id="price2" label="Price 2" variant="outlined" onChange={this.handleChange}/>
+          <TextField name="price2" label="Price 2" variant="outlined" onChange={this.handleChange}/>
           <Button onClick={this.createAndDownloadPdf}>Download PDF </Button>
         </form>
-        </Container>
 
         
           {/* <input
