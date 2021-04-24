@@ -41,13 +41,13 @@ class App extends React.Component {
     return (
       <>
         <CssBaseline />
-        <AppBar position="relative">
+        <AppBar position="relative" style={{marginBottom: "100px", padding: "10px"}}>
           <Typography variant="h6">PDF Generator w/ React</Typography>
         </AppBar>
         <div className="App">
           <form /* className={classes.root} */ noValidate autoComplete="off">
             <Grid container spacing={1} justify="center">
-              <Grid item md={12}>
+              <Grid item md={1}sm={4} xl={12}>
                 <TextField
                   name="name"
                   label="Name"
@@ -55,7 +55,7 @@ class App extends React.Component {
                   onChange={this.handleChange}
                 />
               </Grid>
-              <Grid item md={12}>
+              <Grid item md={1} sm={4} xl={12}>
                 <TextField
                   name="receiptId"
                   label="Receipt ID"
@@ -63,7 +63,7 @@ class App extends React.Component {
                   onChange={this.handleChange}
                 />
               </Grid>
-              <Grid item md={12}>
+              <Grid item md={1}sm={4} xl={12}>
                 <TextField
                   name="price1"
                   label="Price 1"
@@ -71,7 +71,7 @@ class App extends React.Component {
                   onChange={this.handleChange}
                 />
               </Grid>
-              <Grid item md={12}>
+              <Grid item md={1}sm={4} xl={12}>
                 <TextField
                   name="price2"
                   label="Price 2"
@@ -79,7 +79,7 @@ class App extends React.Component {
                   onChange={this.handleChange}
                 />
               </Grid>
-              <Grid item md={12}>
+              <Grid item md={1}sm={4} xl={12}>
                 <Button onClick={this.createAndDownloadPdf}>
                   Download PDF{" "}
                 </Button>
